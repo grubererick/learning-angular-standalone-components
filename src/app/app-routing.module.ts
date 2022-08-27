@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Route, RouterModule } from '@angular/router';
-import { AboutComponent } from './about/about.component';
 
 import { WelcomeComponent } from './welcome/welcome.component';
 
@@ -18,9 +17,7 @@ const routes: Route[] = [
   {
     path: 'dashboard',
     loadChildren: () =>
-      import('./dashboard/dashboard-routing.module').then(
-        (mod) => mod.DashboardRoutingModule
-      ),
+      import('./dashboard/routes').then((mod) => mod.DASBOARD_ROUTES),
   },
 ];
 
